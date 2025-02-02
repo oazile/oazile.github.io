@@ -83,19 +83,16 @@
             width: 30px;
             height: 30px;
         }
-        .avatar-container {
+
+        /* Avatar styling */
+        .avatar {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            border-radius: 10px;
-            border: 3px solid white;
-            padding: 5px;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .avatar-container img {
-            width: 120px; /* Zmienione na dwa razy większy rozmiar */
+            top: 10px;
+            left: 10px;
+            width: 120px;
             height: 120px;
-            border-radius: 50%;
+            border-radius: 15px;
+            border: 3px solid white;
         }
     </style>
 </head>
@@ -109,10 +106,8 @@
     <!-- Przyciemniająca ramka -->
     <div class="overlay"></div>
 
-    <!-- Avatar w lewym górnym rogu -->
-    <div class="avatar-container">
-        <img src="https://drive.google.com/uc?export=view&id=1Q2LwQ-U5vpR7lvY2gLjkUwDvsxocJWgo" alt="Avatar">
-    </div>
+    <!-- Avatar z serwera -->
+    <img src="/avatar.jpg" alt="Avatar" class="avatar">
 
     <!-- Tekst powitalny -->
     <div class="container">
