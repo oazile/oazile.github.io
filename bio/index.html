@@ -53,16 +53,9 @@
     </div>
 
     <script>
-        // Licznik odwiedzin przechowywany w localStorage
-        if (localStorage.getItem('visitCount')) {
-            let count = parseInt(localStorage.getItem('visitCount'));
-            count++;
-            localStorage.setItem('visitCount', count);
-            document.getElementById('visit-count').innerText = count;
-        } else {
-            localStorage.setItem('visitCount', 1);
-            document.getElementById('visit-count').innerText = 1;
-        }
+        // Licznik odwiedzin losowa liczba od 20 do 50
+        let randomCount = Math.floor(Math.random() * (50 - 20 + 1)) + 20;
+        document.getElementById('visit-count').innerText = randomCount;
     </script>
 </body>
 </html>
