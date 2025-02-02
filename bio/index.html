@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .container {
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+        .counter {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted playsinline>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+    <div class="counter">Odwiedziny: <span id="visit-count">0</span></div>
+    <div class="container">
+        <h1>Witaj na mojej stronie!</h1>
+        <p>Tu będzie Twoje bio i linki do social mediów.</p>
+    </div>
+
+    <script>
+        // Licznik odwiedzin przechowywany w localStorage
+        if (localStorage.getItem('visitCount')) {
+            let count = parseInt(localStorage.getItem('visitCount'));
+            count++;
+            localStorage.setItem('visitCount', count);
+            document.getElementById('visit-count').innerText = count;
+        } else {
+            localStorage.setItem('visitCount', 1);
+            document.getElementById('visit-count').innerText = 1;
+        }
+    </script>
+</body>
+</html>
