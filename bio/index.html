@@ -89,10 +89,10 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 50px; /* Dostosuj rozmiar avatara */
-            height: 50px; /* Dostosuj rozmiar avatara */
-            border-radius: 50%; /* Okrojenie avatara w kształt okręgu */
-            border: 2px solid white; /* Biała ramka wokół avatara */
+            width: 100px; /* Dwa razy większy niż wcześniej */
+            height: 100px; /* Dwa razy większy niż wcześniej */
+            border-radius: 10px; /* Kwadratowa ramka */
+            border: 3px solid white; /* Biała ramka wokół avatara */
         }
     </style>
 </head>
@@ -107,7 +107,7 @@
     <div class="overlay"></div>
 
     <!-- Avatar z Discorda -->
-    <img src="https://cdn.discordapp.com/avatars/1015279525694816296/5ba3f6d1e97dab1a104cfe663b911e88.webp" alt="Avatar" class="avatar">
+    <img id="avatar" src="https://cdn.discordapp.com/avatars/1015279525694816296/5ba3f6d1e97dab1a104cfe663b911e88.webp" alt="Avatar" class="avatar">
 
     <!-- Tekst powitalny -->
     <div class="container">
@@ -134,6 +134,17 @@
             const video = document.getElementById('background-video');
             video.muted = false; // Włącz dźwięk
         });
+
+        // Funkcja do zmiany avatara
+        function changeAvatar(newAvatarUrl) {
+            const avatar = document.getElementById('avatar');
+            avatar.src = newAvatarUrl; // Zmiana linku do avatara
+        }
+
+        // Przykład: zmiana avatara po 5 sekundach
+        setTimeout(() => {
+            changeAvatar("https://cdn.discordapp.com/avatars/1015279525694816296/another-avatar-url.png"); // Przykład zmiany
+        }, 5000); // Po 5 sekundach zmieni się avatar
     </script>
 </body>
 </html>
