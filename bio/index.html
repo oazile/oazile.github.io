@@ -39,12 +39,23 @@
             text-align: center;
             color: white;
             z-index: 2;
+            position: absolute;
+            top: 10%; /* Ustawienie tekstu wyżej, ale nie przy samej górze */
+            width: 100%;
+        }
+        .container h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .container p {
+            font-size: 1.5rem;
+            margin-top: 10px;
         }
         .buttons-container {
             display: flex;
             flex-direction: column; /* Przyciski ustawione pionowo */
             gap: 20px;
-            width: 100%; /* Rozciąga przyciski na całą szerokość */
+            width: 50%; /* Przyciski rozciągnięte na 50% szerokości */
             padding: 0 20px; /* Odstęp po bokach */
             position: absolute;
             bottom: 50px; /* Przyciski pojawiają się bliżej dołu */
@@ -63,7 +74,7 @@
             cursor: pointer;
             transition: background-color 0.3s;
             text-decoration: none; /* Usunięcie podkreślenia */
-            width: 100%; /* Rozciąga przycisk na całą szerokość */
+            width: 100%; /* Rozciąga przyciski na całą szerokość kontenera */
         }
         .button:hover {
             background-color: rgba(0, 0, 0, 0.9);
