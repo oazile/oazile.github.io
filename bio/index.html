@@ -51,18 +51,5 @@
         <h1>Witaj na mojej stronie!</h1>
         <p>Tu będzie Twoje bio i linki do social mediów.</p>
     </div>
-
-    <script>
-        // Licznik odwiedzin przechowywany w localStorage
-        if (localStorage.getItem('visitCount')) {
-            let count = parseInt(localStorage.getItem('visitCount'));
-            count++;
-            localStorage.setItem('visitCount', count);
-            document.getElementById('visit-count').innerText = count;
-        } else {
-            localStorage.setItem('visitCount', 1);
-            document.getElementById('visit-count').innerText = 1;
-        }
-    </script>
 </body>
 </html>
