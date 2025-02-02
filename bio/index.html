@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio Page</title>
+    <title>@Oazile - Bio Page</title>
     <style>
         body {
             margin: 0;
@@ -99,7 +99,7 @@
 <body>
     <!-- Film z serwera -->
     <video id="background-video" autoplay loop muted playsinline>
-        <source src="/videos/video.mp4" type="video/mp4">
+        <source src="https://raw.githubusercontent.com/oazile/oazile.github.io/refs/heads/main/bio/video.mp4" type="video/mp4">
         Twój browser nie wspiera tagu video.
     </video>
 
@@ -111,8 +111,8 @@
 
     <!-- Tekst powitalny -->
     <div class="container">
-        <h1>Cześć, witaj na mojej stronie!</h1>
-        <p>Znajdziesz tutaj moje projekty oraz linki do moich social mediów.</p>
+        <h1>Oazile</h1>
+        <p>Go to my socials!</p>
     </div>
 
     <!-- Przyciski z obrazkami i linkami -->
@@ -133,12 +133,6 @@
         document.body.addEventListener('click', function() {
             const video = document.getElementById('background-video');
             video.muted = false; // Włącz dźwięk
-        });
-
-        // Przyciszanie dźwięku wideo o 50%
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('background-video');
-            video.volume = 0.5;  // Ustawia głośność na 50%
         });
     </script>
 </body>
