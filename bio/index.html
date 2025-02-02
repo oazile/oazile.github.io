@@ -15,7 +15,7 @@
             background: black;
             overflow: hidden;
             font-family: Arial, sans-serif;
-            flex-direction: column; /* Ustawienie elementów w kolumnie */
+            flex-direction: column;
         }
         video {
             position: fixed;
@@ -32,7 +32,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Przyciemnia wideo */
+            background: rgba(0, 0, 0, 0.4);
             z-index: -1;
         }
         .container {
@@ -40,7 +40,7 @@
             color: white;
             z-index: 2;
             position: absolute;
-            top: 10%; /* Ustawienie tekstu wyżej */
+            top: 10%;
             width: 100%;
         }
         .container h1 {
@@ -53,12 +53,12 @@
         }
         .buttons-container {
             display: flex;
-            flex-direction: column; /* Przyciski ustawione pionowo */
+            flex-direction: column;
             gap: 20px;
-            width: 50%; /* Przyciski rozciągnięte na 50% szerokości */
-            padding: 0 20px; /* Odstęp po bokach */
+            width: 50%;
+            padding: 0 20px;
             position: absolute;
-            top: 30%; /* Przyciski pojawiają się wyżej */
+            top: 30%;
         }
         .button {
             background-color: rgba(0, 0, 0, 0.7);
@@ -73,15 +73,15 @@
             border-radius: 10px;
             cursor: pointer;
             transition: background-color 0.3s;
-            text-decoration: none; /* Usunięcie podkreślenia */
-            width: 100%; /* Rozciąga przyciski na całą szerokość kontenera */
+            text-decoration: none;
+            width: 100%;
         }
         .button:hover {
             background-color: rgba(0, 0, 0, 0.9);
         }
         .button img {
-            width: 30px; /* Szerokość obrazków ikon */
-            height: 30px; /* Wysokość obrazków ikon */
+            width: 30px;
+            height: 30px;
         }
     </style>
 </head>
@@ -104,13 +104,13 @@
     <!-- Przyciski z obrazkami i linkami -->
     <div class="buttons-container">
         <a href="https://discord.com" class="button" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Discord_logo_2021.svg" alt="Discord Icon"> Discord
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111375.png" alt="Discord Icon"> Discord
         </a>
         <a href="https://spotify.com" class="button" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Spotify_logo_with_text.svg" alt="Spotify Icon"> Spotify
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174882.png" alt="Spotify Icon"> Spotify
         </a>
         <a href="https://paypal.com" class="button" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/PayPal_logo_2014.svg" alt="PayPal Icon"> PayPal
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="PayPal Icon"> PayPal
         </a>
     </div>
 
