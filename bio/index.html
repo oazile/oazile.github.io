@@ -83,6 +83,17 @@
             width: 30px;
             height: 30px;
         }
+
+        /* Avatar w lewym górnym rogu */
+        .avatar {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px; /* Dostosuj rozmiar avatara */
+            height: 50px; /* Dostosuj rozmiar avatara */
+            border-radius: 50%; /* Okrojenie avatara w kształt okręgu */
+            border: 2px solid white; /* Biała ramka wokół avatara */
+        }
     </style>
 </head>
 <body>
@@ -94,6 +105,9 @@
 
     <!-- Przyciemniająca ramka -->
     <div class="overlay"></div>
+
+    <!-- Avatar z Discorda -->
+    <img src="https://cdn.discordapp.com/avatars/1015279525694816296/5ba3f6d1e97dab1a104cfe663b911e88.webp" alt="Avatar" class="avatar">
 
     <!-- Tekst powitalny -->
     <div class="container">
