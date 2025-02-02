@@ -53,8 +53,9 @@
 </head>
 <body>
     <!-- Film z dźwiękiem -->
-    <video autoplay loop playsinline>
+    <video id="background-video" autoplay loop muted playsinline>
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Twój browser nie wspiera tagu video.
     </video>
 
     <!-- Przyciemniająca ramka -->
@@ -70,6 +71,12 @@
         // Licznik odwiedzin losowa liczba od 20 do 50
         let randomCount = Math.floor(Math.random() * (50 - 20 + 1)) + 20;
         document.getElementById('visit-count').innerText = randomCount;
+
+        // Funkcja do włączenia dźwięku po kliknięciu
+        document.body.addEventListener('click', function() {
+            const video = document.getElementById('background-video');
+            video.muted = false; // Włącz dźwięk
+        });
     </script>
 </body>
 </html>
