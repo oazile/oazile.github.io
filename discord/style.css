@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Poppins, sans-serif;
+  color: #f0f0f0;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(14, 14, 14);
+  color: #a2a5b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+.card {
+  padding: 2em;
+  width: 100%;
+  max-width: 700px;
+  background: rgb(26, 26, 26);
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after,
+.card::before {
+  --angle: 0deg;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 90%, rgb(86, 98, 246));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* 🔻 Responsywne poprawki dla telefonów */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 1.5em 1em;
+  }
+}
