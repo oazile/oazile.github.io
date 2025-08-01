@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oazile | Links</title>
   <link rel="icon" href="https://raw.githubusercontent.com/oazile/oazile.github.io/refs/heads/main/bio/ozlogo.png" type="image/png">
-
-<script>
+  
+  <script>
 document.addEventListener("DOMContentLoaded", () => {
   const baseTitle = "Oazile | ";
   const endings = ["Biography", "About me", "Personal profile", "Short bio", "Who I am"];
@@ -47,19 +47,17 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("today-date").textContent = formattedDate;
     };
   </script>
-
+  
   <style>
     :root {
       --bg-light: #ffffff;
       --text-light: #000000;
       --card-bg-light: #f4f4f4;
       --hover-light: #e0e0e0;
-
       --bg-dark: #0e0e0e;
       --text-dark: #ffffff;
       --card-bg-dark: #1a1a1a;
       --hover-dark: #222;
-
       --avcolor: #a7a7a7;
       --radius: 12px;
       --transition: all 0.3s ease;
@@ -110,8 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       position: relative;
     }
 
-    #bg-video-dark,
-    #bg-video-light {
+    video {
       position: fixed;
       top: 0;
       left: 0;
@@ -150,98 +147,120 @@ document.addEventListener("DOMContentLoaded", () => {
       margin-bottom: 2rem;
     }
 
-    .link {
-      background-color: var(--hover);
-      border-radius: var(--radius);
-      padding: 0.75rem 1rem;
-      text-decoration: none;
-      color: var(--text);
-      transition: var(--transition);
-      font-weight: 500;
-    }
+        .link {
+            background-color: var(--hover);
+            border-radius: var(--radius);
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: var(--transition);
+            font-weight: 500;
+        }
 
-    .link:hover {
-      opacity: 0.8;
-    }
+        .link:hover {
+            opacity: 0.8;
+        }
 
-    .link-red {
-      color: rgb(255, 0, 0);
-    }
+        .link-red {
+            color: rgb(255, 0, 0);
+        }
 
-    .link-green {
-      color: green;
-    }
+        .link-red:hover {
+            color: rgb(255, 0, 0);
+        }
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
+        .link-green {
+            color: green;
+        }
 
-    .social-icons a {
-      color: var(--text);
-      transition: var(--transition);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-    }
+        .link-green:hover {
+            color: darkgreen;
+        }
 
-    .social-icons svg {
-      width: 36px;
-      height: 36px;
-      fill: var(--text);
-    }
+                .link-blue {
+            color: rgb(102, 75, 255);
+        }
 
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #666;
-    }
+        .link-blue:hover {
+            color: rgb(102, 75, 255);
+        }
 
-    .credit {
-      margin-top: 0.75rem;
-      font-size: 0.75rem;
-      color: #777;
-    }
 
-    .credit a {
-      color: var(--text);
-      text-decoration: underline;
-      transition: var(--transition);
-    }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
 
-    .theme-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: none;
-      border: none;
-      color: var(--text);
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: var(--transition);
-      z-index: 2;
-    }
+        .social-icons a {
+            color: var(--text);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
 
-    .theme-toggle:hover {
-      opacity: 0.8;
-    }
-  </style>
+        .social-icons a:hover {
+            top: 10px;
+        }
+
+        .social-icons svg {
+            width: 36px;
+            height: 36px;
+            fill: var(--text);
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .credit {
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
+            color: #777;
+        }
+
+        .credit a {
+            color: var(--text);
+            text-decoration: underline;
+            transition: var(--transition);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- 🎥 WIDEO TŁO -->
-  <video id="bg-video-dark" autoplay loop playsinline>
-    <source src="film1.mp4" type="video/mp4">
+  <video id="bg-video-dark" autoplay muted loop playsinline>
+    <source src="film11.mp4" type="video/mp4" />
   </video>
-  <video id="bg-video-light" autoplay loop playsinline>
-    <source src="film1.mp4" type="video/mp4">
+  <video id="bg-video-light" autoplay muted loop playsinline>
+    <source src="film22.mp4" type="video/mp4" />
   </video>
 
-  <button class="theme-toggle" id="toggleTheme" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">🌓</button>
+  <audio id="audio-dark" src="audio11.mp3" loop></audio>
+  <audio id="audio-light" src="audio22.mp3" loop></audio>
+
+  <button class="theme-toggle" id="toggleTheme">🌓</button>
 
   <div class="container">
     <img src="https://raw.githubusercontent.com/oazile/oazile.github.io/refs/heads/main/bio/avatar.jpg" alt="Oazile Avatar" class="avatar" />
@@ -251,73 +270,106 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="links">
       <a href="https://oazile.github.io/youtube" class="link link-red" target="_blank">Visit My Youtube Channel</a>
       <a href="https://oazile.github.io/spotify" class="link link-green" target="_blank">Listen to my playlists on Spotify</a>
-    </div>
-
-    <div class="links">
-      <h2>Tools I made for you</h2>
-      <a href="https://markodenic.com/tools/buttons-generator/" class="link" target="_blank">Button Generator</a>
-      <a href="https://markodenic.com/tools/glassmorphism-css-generator/" class="link" target="_blank">Glassmorphism CSS Generator</a>
-      <a href="https://freecodetools.org/qr-code-generator/" class="link" target="_blank">QR Code Generator</a>
-      <a href="https://javascriptquiz.com/" class="link" target="_blank">JavaScript Quiz</a>
-    </div>
-
-    <div class="links">
-      <h2>Trending articles</h2>
-      <a href="https://markodenic.com/css-pulse-animation/" class="link" target="_blank">CSS Pulse Animation</a>
-      <a href="https://markodenic.com/git-cheat-sheet/" class="link" target="_blank">Git Cheat Sheet</a>
-      <a href="https://markodenic.com/from-zero-to-web-developer/" class="link" target="_blank">From zero to Web Developer</a>
-    </div>
-
-    <div class="social-icons">
-      <!-- ikony social media — niezmienione -->
-    </div>
-
-    <div class="footer">© <span id="year"></span> Oazile <span id="visits"></span></div>
-
-    <div class="credit">
-      Refreshed on <b><span id="today-date"></span></b> ·
-      <a href="https://github.com/markodenic/links" target="_blank">View source on GitHub</a>
-    </div>
+      <a href="https://oazile.github.io/discord" class="link link-blue" target="_blank">Join to my Discord Server</a>
   </div>
 
+        <div class="footer">© <span id="year"></span> Oazile <span id="visits"></span></div>
+
+        <div class="credit">
+            Refreshed on <b><span id="today-date"></span></b> ·
+            <a href="https://oazile.github.io/bio" target="_blank">Update SOON</a>
+        </div>
+    </div>
+
   <script>
-    const toggle = document.getElementById("toggleTheme");
     const root = document.documentElement;
+    const toggle = document.getElementById("toggleTheme");
     const darkVideo = document.getElementById("bg-video-dark");
     const lightVideo = document.getElementById("bg-video-light");
+    const darkAudio = document.getElementById("audio-dark");
+    const lightAudio = document.getElementById("audio-light");
 
-    function updateVideoBackground(theme) {
+    let currentTheme;
+    let musicPlaying = false;
+
+    function updateThemeVisuals(theme) {
       if (theme === "dark") {
         darkVideo.style.display = "block";
         lightVideo.style.display = "none";
-        darkVideo.play();
-        lightVideo.pause();
       } else {
         darkVideo.style.display = "none";
         lightVideo.style.display = "block";
-        lightVideo.play();
-        darkVideo.pause();
       }
     }
 
-    const storedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = storedTheme || (prefersDark ? 'dark' : 'light');
-    root.setAttribute("data-theme", theme);
-    updateVideoBackground(theme);
+    function playAudioForTheme(theme) {
+      if (theme === "dark") {
+        lightAudio.pause();
+        lightAudio.currentTime = 0;
+        darkAudio.volume = 0.5;
+        darkAudio.play().catch(err => console.warn("Autoplay blocked (dark):", err));
+        musicPlaying = true;
+      } else {
+        darkAudio.pause();
+        darkAudio.currentTime = 0;
+        lightAudio.volume = 0.5;
+        lightAudio.play().catch(err => console.warn("Autoplay blocked (light):", err));
+        musicPlaying = true;
+      }
+      currentTheme = theme;
+    }
+
+    function pauseAllAudio() {
+      darkAudio.pause();
+      lightAudio.pause();
+    }
+
+    function resumeAudio() {
+      if (!musicPlaying) return;
+      if (currentTheme === "dark") {
+        darkAudio.play().catch(err => console.warn("Autoplay blocked on resume (dark):", err));
+      } else {
+        lightAudio.play().catch(err => console.warn("Autoplay blocked on resume (light):", err));
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const storedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      root.setAttribute("data-theme", theme);
+      updateThemeVisuals(theme);
+      currentTheme = theme;
+
+      // Odtwarzaj muzykę po pierwszym kliknięciu w dowolne miejsce
+      function onFirstClick() {
+        playAudioForTheme(theme);
+        document.removeEventListener("click", onFirstClick);
+      }
+      document.addEventListener("click", onFirstClick);
+
+      // Pauzuj/wznawiaj muzykę przy zmianie widoczności strony
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          pauseAllAudio();
+        } else {
+          resumeAudio();
+        }
+      });
+    });
 
     toggle.addEventListener("click", () => {
       const current = root.getAttribute("data-theme");
       const newTheme = current === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", newTheme);
       localStorage.setItem("theme", newTheme);
-      updateVideoBackground(newTheme);
+      updateThemeVisuals(newTheme);
+      if (musicPlaying) {
+        playAudioForTheme(newTheme);
+      }
     });
-
-    // Data i rok
-    document.getElementById("year").textContent = new Date().getFullYear();
-    const today = new Date();
-    document.getElementById("today-date").textContent = today.toLocaleDateString("pl-PL");
+       // Dynamic Year
+        document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 
