@@ -1,0 +1,90 @@
+/* Reset i ustawienia bazowe */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Poppins, sans-serif;
+  color: #f0f0f0;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(14, 14, 14);
+  color: #a2a5b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+/* Nagłówek */
+h1 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Karta */
+.card {
+  width: 100%;
+  max-width: 700px;
+  padding: 2em;
+  margin: 0 auto;
+  background: rgb(26, 26, 26);
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Animowany gradient (obramowanie) */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after,
+.card::before {
+  --angle: 0deg;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), rgb(14, 14, 14), rgb(30, 215, 96), rgb(14, 14, 14), rgb(14, 14, 14), rgb(14, 14, 14), rgb(14, 14, 14), rgb(30, 215, 96), rgb(14, 14, 14), rgb(14, 14, 14), rgb(14, 14, 14), rgb(14, 14, 14));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 100deg;
+  }
+  to {
+    --angle: 460deg;
+  }
+}
+
+/* Responsywność – telefon komórkowy */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 1.5em 1em;
+  }
+}
