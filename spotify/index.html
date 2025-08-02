@@ -1,6 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://open.spotify.com/user/zexdbz2dvj8bfb6rc7li4s8y1?si=f08eed652ccd4f36">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oazile - Discord Redirect</title>
+  <link rel="stylesheet" href="style.css">
+  
+<script>
+    let seconds = 5;
+    function countdown() {
+        const h1 = document.getElementById("countdown");
+        h1.textContent = "Zostaniesz przeniesiony za " + seconds + " sekund!";
+        if (seconds === 0) {
+            window.location.href = "https://open.spotify.com/user/zexdbz2dvj8bfb6rc7li4s8y1?si=f08eed652ccd4f36";
+        } else {
+            seconds--;
+            setTimeout(countdown, 1000);
+        }
+     }
+    window.onload = countdown;
+</script>
+
 </head>
+<body>
+  <div class="card">
+    <h1 id="countdown">Zostaniesz przeniesiony za 5 sekund...</h1>
+    <p>Siema! Za chwilę automatycznie przeniesiesz się do czatu społeczności na Discord. </p>
+  </div>
+</body>
 </html>
