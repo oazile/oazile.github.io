@@ -54,7 +54,7 @@ h1 {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: conic-gradient(from var(--angle), transparent 90%, rgb(86, 98, 246));
+  background-image: conic-gradient(from var(--angle), rgb(14, 14, 14), rgb(86, 98, 246), rgb(14, 14, 14), rgb(14, 14, 14), rgb(14, 14, 14), rgb(14, 14, 14), rgb(86, 98, 246), rgb(14, 14, 14), rgb(14, 14, 14), rgb(14, 14, 14), rgb(14, 14, 14));
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -71,10 +71,10 @@ h1 {
 
 @keyframes spin {
   from {
-    --angle: 0deg;
+    --angle: 100deg;
   }
   to {
-    --angle: 360deg;
+    --angle: 460deg;
   }
 }
 
