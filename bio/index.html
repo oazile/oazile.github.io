@@ -8,45 +8,76 @@
     <link rel="icon" href="https://raw.githubusercontent.com/oazile/oazile.github.io/refs/heads/main/bio/ozlogo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const baseTitle = "Oazile | ";
-            const endings = ["Biography", "About me", "Personal profile", "Short bio", "Who I am"];
-            let currentIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const baseTitle = "Oazile | ";
+    const endings = ["Biography", "About me", "Personal profile", "Short bio", "Who I am"];
+    let currentIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let showCursor = true;
+    let lastCharTime = 0;
+    let lastCursorTime = 0;
+    let isFocused = true; 
 
-            function typeTitle() {
-                const fullEnding = endings[currentIndex];
-                const currentText = isDeleting
-                    ? fullEnding.substring(0, charIndex--)
-                    : fullEnding.substring(0, charIndex++);
+    function animateTitle(timestamp) {
+        if (!isFocused) {
+            requestAnimationFrame(animateTitle);
+            return; // w tle nie animujemy
+        }
 
-                document.title = baseTitle + currentText;
+        // Miganie kursora co 500ms
+        if (timestamp - lastCursorTime > 500) {
+            showCursor = !showCursor;
+            lastCursorTime = timestamp;
+        }
 
-                if (!isDeleting && charIndex > fullEnding.length) {
-                    setTimeout(() => isDeleting = true, 1000);
-                } else if (isDeleting && charIndex === 0) {
+        // Pisanie/usuwanie co 300ms (pisanie) lub 200ms (usuwanie)
+        if (timestamp - lastCharTime > (isDeleting ? 200 : 300)) {
+            const fullEnding = endings[currentIndex];
+
+            if (!isDeleting) {
+                charIndex++;
+                if (charIndex > fullEnding.length) {
+                    charIndex = fullEnding.length;
+                    setTimeout(() => { isDeleting = true; }, 3000);
+                }
+            } else {
+                charIndex--;
+                if (charIndex < 0) {
+                    charIndex = 0;
                     isDeleting = false;
                     currentIndex = (currentIndex + 1) % endings.length;
                 }
-
-                const speed = isDeleting ? 80 : 120;
-                setTimeout(typeTitle, speed);
             }
+            lastCharTime = timestamp;
+        }
 
-            typeTitle();
-        });
+        // Tworzenie tytułu z kursorem
+        const currentText = endings[currentIndex].substring(0, charIndex);
+        const cursor = showCursor ? "_" : " ";
+        document.title = baseTitle + currentText + cursor;
 
-        window.onload = function () {
-            const today = new Date();
-            const day = String(today.getDate()).padStart(2, '0');
-            const month = String(today.getMonth() + 1).padStart(2, '0');
-            const year = today.getFullYear();
-            const formattedDate = `${day}.${month}.${year}`;
-            document.getElementById("today-date").textContent = formattedDate;
-        };
-    </script>
+        requestAnimationFrame(animateTitle);
+    }
+
+    // Ustawienie stałego tytułu przy opuszczeniu karty
+    window.addEventListener("blur", () => {
+        isFocused = false;
+        document.title = baseTitle + "Biography"; // ustawiamy raz przed zamrożeniem
+    });
+
+    // Wznowienie animacji po powrocie
+    window.addEventListener("focus", () => {
+        isFocused = true;
+    });
+
+    requestAnimationFrame(animateTitle);
+});
+</script>
+
+
+
 
     <style>
         :root {
