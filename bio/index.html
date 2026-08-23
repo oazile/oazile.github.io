@@ -261,8 +261,8 @@
       transform: translateY(-6px);
     }
 
-    .server-card.arivan { border-left: 4px solid #5865F2; }
-    .server-card.kameleon { border-left: 4px solid #2ecc71; }
+    .server-card.communityserver { border-left: 4px solid #5865F2; }
+    .server-card.gameserver { border-left: 4px solid #2ecc71; }
 
     .server-card-top {
       display: flex;
@@ -364,8 +364,8 @@
     }
 
     /* Dopasowanie kolorów ikon dla poszczególnych społeczności */
-    .community-icon.arivan-icon { color: #5865F2; }
-    .community-icon.kameleon-icon { color: #2ecc71; }
+    .community-icon.communityserver-icon { color: #5865F2; }
+    .community-icon.gameserver-icon { color: #2ecc71; }
 
     .community-icon:hover {
       color: #fff !important;
@@ -450,7 +450,7 @@
       flex-shrink: 0;
     }
 
-    #arivanStatsText, #kameleonStatsText {
+    #communityserverStatsText, #gameserverStatsText {
       flex-shrink: 0;
     }
 
@@ -777,7 +777,7 @@
   </div>
 
   <div class="featured-servers">
-    <a id="arivanLink" class="server-card arivan" href="https://disboard.org/pl/server/edit/1251972573584166963" target="_blank">
+    <a id="communityserverLink" class="server-card communityserver" href="https://disboard.org/pl/server/edit/1251972573584166963" target="_blank">
       <div class="server-card-top">
         <div class="server-logo-wrap">
           <img src="images/logo1.png" alt="Discord Arivan Community Logo">
@@ -785,7 +785,7 @@
         <div class="card-text">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0;">
             <span class="card-title">Discord Arivan Community</span>
-            <span class="community-icon arivan-icon" onclick="event.preventDefault(); window.open('https://disboard.org/pl/server/1251972573584166963', '_blank');" title="Otwórz wpis">
+            <span class="community-icon communityserver-icon" onclick="event.preventDefault(); window.open('https://disboard.org/pl/server/1251972573584166963', '_blank');" title="Otwórz wpis">
               <i class="fas fa-external-link-alt"></i>
             </span>
           </div>
@@ -796,23 +796,23 @@
       <div class="server-card-divider"></div>
       
       <div class="server-card-bottom">
-        <div id="arivanStats" class="server-stats">
+        <div id="communityserverStats" class="server-stats">
           <div class="stats-content-inner">
             <span class="status-dot"></span>
-            <span id="arivanStatsText">-- Online</span>
-            <svg id="arivanMic" class="icon__2ea32 iconLive_c69b6d voice-indicator-microphone" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3a1 1 0 0 0-1-1h-.06a1 1 0 0 0-.74.32L5.92 7H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.92l4.28 4.68a1 1 0 0 0 .74.32H11a1 1 0 0 0 1-1V3ZM15.1 20.75c-.58.14-1.1-.33-1.1-.92v-.03c0-.5.37-.92.85-1.05a7 7 0 0 0 0-13.5A1.11 1.11 0 0 1 14 4.2v-.03c0-.6.52-1.06 1.1-.92a9 9 0 0 1 0 17.5Z"></path><path fill="currentColor" d="M15.16 16.51c-.57.28-1.16-.2-1.16-.83v-.14c0-.43.28-.8.63-1.02a3 3 0 0 0 0-5.04c-.35-.23-.63-.6-.63-1.02v-.14c0-.63.59-1.1 1.16-.83a5 5 0 0 1 0 9.02Z"></path></svg>
+            <span id="communityserverStatsText">-- Online</span>
+            <svg id="communityserverMic" class="icon__2ea32 iconLive_c69b6d voice-indicator-microphone" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3a1 1 0 0 0-1-1h-.06a1 1 0 0 0-.74.32L5.92 7H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.92l4.28 4.68a1 1 0 0 0 .74.32H11a1 1 0 0 0 1-1V3ZM15.1 20.75c-.58.14-1.1-.33-1.1-.92v-.03c0-.5.37-.92.85-1.05a7 7 0 0 0 0-13.5A1.11 1.11 0 0 1 14 4.2v-.03c0-.6.52-1.06 1.1-.92a9 9 0 0 1 0 17.5Z"></path><path fill="currentColor" d="M15.16 16.51c-.57.28-1.16-.2-1.16-.83v-.14c0-.43.28-.8.63-1.02a3 3 0 0 0 0-5.04c-.35-.23-.63-.6-.63-1.02v-.14c0-.63.59-1.1 1.16-.83a5 5 0 0 1 0 9.02Z"></path></svg>
           </div>
         </div>
         
-        <div id="arivanUserAvatars" class="server-user-avatars">
-          <div id="arivanTrack" class="avatars-scroll-track"></div>
+        <div id="communityserverUserAvatars" class="server-user-avatars">
+          <div id="communityserverTrack" class="avatars-scroll-track"></div>
         </div>
         
-        <div id="arivanBtn" class="join-btn">Dołącz</div>
+        <div id="communityserverBtn" class="join-btn">Dołącz</div>
       </div>
     </a>
 
-    <a id="kameleonLink" class="server-card kameleon" href="https://disboard.org/pl/server/1173634589302993017" target="_blank">
+    <a id="gameserverLink" class="server-card gameserver" href="https://disboard.org/pl/server/1173634589302993017" target="_blank">
       <div class="server-card-top">
         <div class="server-logo-wrap">
           <img src="images/logo2.png" alt="Meccha Chameleon Polska Logo">
@@ -820,7 +820,7 @@
         <div class="card-text">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0;">
             <span class="card-title">Meccha Chameleon Polska</span>
-            <span class="community-icon kameleon-icon" onclick="event.preventDefault(); window.open('https://steamcommunity.com/app/4704690/discussions/0/571541539431442779/', '_blank');" title="Otwórz wpis">
+            <span class="community-icon gameserver-icon" onclick="event.preventDefault(); window.open('https://steamcommunity.com/app/4704690/discussions/0/571541539431442779/', '_blank');" title="Otwórz wpis">
               <i class="fas fa-external-link-alt"></i>
             </span>
           </div>
@@ -831,19 +831,19 @@
       <div class="server-card-divider"></div>
       
       <div class="server-card-bottom">
-        <div id="kameleonStats" class="server-stats">
+        <div id="gameserverStats" class="server-stats">
           <div class="stats-content-inner">
             <span class="status-dot"></span>
-            <span id="kameleonStatsText">-- Online</span>
-            <svg id="kameleonMic" class="icon__2ea32 iconLive_c69b6d voice-indicator-microphone" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3a1 1 0 0 0-1-1h-.06a1 1 0 0 0-.74.32L5.92 7H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.92l4.28 4.68a1 1 0 0 0 .74.32H11a1 1 0 0 0 1-1V3ZM15.1 20.75c-.58.14-1.1-.33-1.1-.92v-.03c0-.5.37-.92.85-1.05a7 7 0 0 0 0-13.5A1.11 1.11 0 0 1 14 4.2v-.03c0-.6.52-1.06 1.1-.92a9 9 0 0 1 0 17.5Z"></path><path fill="currentColor" d="M15.16 16.51c-.57.28-1.16-.2-1.16-.83v-.14c0-.43.28-.8.63-1.02a3 3 0 0 0 0-5.04c-.35-.23-.63-.6-.63-1.02v-.14c0-.63.59-1.1 1.16-.83a5 5 0 0 1 0 9.02Z"></path></svg>
+            <span id="gameserverStatsText">-- Online</span>
+            <svg id="gameserverMic" class="icon__2ea32 iconLive_c69b6d voice-indicator-microphone" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3a1 1 0 0 0-1-1h-.06a1 1 0 0 0-.74.32L5.92 7H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.92l4.28 4.68a1 1 0 0 0 .74.32H11a1 1 0 0 0 1-1V3ZM15.1 20.75c-.58.14-1.1-.33-1.1-.92v-.03c0-.5.37-.92.85-1.05a7 7 0 0 0 0-13.5A1.11 1.11 0 0 1 14 4.2v-.03c0-.6.52-1.06 1.1-.92a9 9 0 0 1 0 17.5Z"></path><path fill="currentColor" d="M15.16 16.51c-.57.28-1.16-.2-1.16-.83v-.14c0-.43.28-.8.63-1.02a3 3 0 0 0 0-5.04c-.35-.23-.63-.6-.63-1.02v-.14c0-.63.59-1.1 1.16-.83a5 5 0 0 1 0 9.02Z"></path></svg>
           </div>
         </div>
         
-        <div id="kameleonUserAvatars" class="server-user-avatars">
-          <div id="kameleonTrack" class="avatars-scroll-track"></div>
+        <div id="gameserverUserAvatars" class="server-user-avatars">
+          <div id="gameserverTrack" class="avatars-scroll-track"></div>
         </div>
         
-        <div id="kameleonBtn" class="join-btn">Dołącz</div>
+        <div id="gameserverBtn" class="join-btn">Dołącz</div>
       </div>
     </a>
   </div>
@@ -899,8 +899,8 @@
 <script>
   const SIMULATION_MULTIPLIER = 1; 
 
-  const DISCORD_ARIVAN_ID = '1251972573584166963'; 
-  const DISCORD_KAMELEON_ID = '1173634589302993017'; 
+  const DISCORD_COMMUNITYSERVER_ID = '1251972573584166963'; 
+  const DISCORD_GAMESERVER_ID = '1173634589302993017'; 
   
   const DISCORD_USERNAMES = [
     "[CEO] TheOazile",
@@ -917,19 +917,19 @@
   const statusBubble = document.getElementById('statusBubble');
   const profileGameActivity = document.getElementById('profileGameActivity');
   
-  const arivanLink = document.getElementById('arivanLink');
-  const arivanBtn = document.getElementById('arivanBtn');
-  const arivanStatsText = document.getElementById('arivanStatsText');
-  const arivanUserAvatars = document.getElementById('arivanUserAvatars');
-  const arivanTrack = document.getElementById('arivanTrack');
-  const arivanMic = document.getElementById('arivanMic');
+  const communityserverLink = document.getElementById('communityserverLink');
+  const communityserverBtn = document.getElementById('communityserverBtn');
+  const communityserverStatsText = document.getElementById('communityserverStatsText');
+  const communityserverUserAvatars = document.getElementById('communityserverUserAvatars');
+  const communityserverTrack = document.getElementById('communityserverTrack');
+  const communityserverMic = document.getElementById('communityserverMic');
 
-  const kameleonLink = document.getElementById('kameleonLink');
-  const kameleonBtn = document.getElementById('kameleonBtn');
-  const kameleonStatsText = document.getElementById('kameleonStatsText');
-  const kameleonUserAvatars = document.getElementById('kameleonUserAvatars');
-  const kameleonTrack = document.getElementById('kameleonTrack');
-  const kameleonMic = document.getElementById('kameleonMic');
+  const gameserverLink = document.getElementById('gameserverLink');
+  const gameserverBtn = document.getElementById('gameserverBtn');
+  const gameserverStatsText = document.getElementById('gameserverStatsText');
+  const gameserverUserAvatars = document.getElementById('gameserverUserAvatars');
+  const gameserverTrack = document.getElementById('gameserverTrack');
+  const gameserverMic = document.getElementById('gameserverMic');
 
   function formatNumber(num) {
       return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -949,11 +949,11 @@
   }
 
   let currentFetchedStatus = 'offline';
-  let isSpeakingOnArivan = false;
-  let isSpeakingOnKameleon = false;
+  let isSpeakingOnCommunityserver = false;
+  let isSpeakingOnGameserver = false;
 
-  const pendingAvatarsAnimation = { arivan: [], kameleon: [] };
-  const activeIntervals = { arivan: null, kameleon: null };
+  const pendingAvatarsAnimation = { communityserver: [], gameserver: [] };
+  const activeIntervals = { communityserver: null, gameserver: null };
 
   function startMarqueeAnimation(container, track, key) {
       if (activeIntervals[key]) { clearInterval(activeIntervals[key]); }
@@ -1091,22 +1091,22 @@
   }
 
   async function fetchDiscordData() {
-      isSpeakingOnArivan = false;
-      isSpeakingOnKameleon = false;
+      isSpeakingOnCommunityserver = false;
+      isSpeakingOnGameserver = false;
       currentFetchedStatus = 'offline';
 
-      // 1. Serwer Arivan
+      // 1. Serwer Community
       try {
-          const response = await fetch(`https://discord.com/api/guilds/${DISCORD_ARIVAN_ID}/widget.json`);
-          if (!response.ok) throw new Error("Błąd widgetu Arivan");
+          const response = await fetch(`https://discord.com/api/guilds/${DISCORD_COMMUNITYSERVER_ID}/widget.json`);
+          if (!response.ok) throw new Error("Błąd widgetu Communityserver");
           const data = await response.json();
           
           if (data.instant_invite) {
-              arivanLink.href = data.instant_invite;
-              if(arivanBtn.tagName === 'A') { arivanBtn.href = data.instant_invite; }
+              communityserverLink.href = data.instant_invite;
+              if(communityserverBtn.tagName === 'A') { communityserverBtn.href = data.instant_invite; }
           }
           if (data.presence_count !== undefined) {
-              arivanStatsText.textContent = `${formatNumber(data.presence_count)} Online`;
+              communityserverStatsText.textContent = `${formatNumber(data.presence_count)} Online`;
           }
 
           const member = data.members.find(m => m.username && DISCORD_USERNAMES.includes(m.username.toLowerCase()));
@@ -1118,12 +1118,12 @@
                   gameActivityText = `🎮 Playing: ${member.game.name}`;
               }
               if (member.channel_id !== undefined && member.channel_id !== null) {
-                  isSpeakingOnArivan = true;
+                  isSpeakingOnCommunityserver = true;
               }
           }
 
           if (data.members) {
-              processVoiceAndOnlineUsers(data.members, arivanUserAvatars, arivanTrack, arivanMic, 'arivan');
+              processVoiceAndOnlineUsers(data.members, communityserverUserAvatars, communityserverTrack, communityserverMic, 'communityserver');
           }
           
           if (gameActivityText === '') {
@@ -1136,65 +1136,65 @@
 
       } catch (error) {
           console.error(error);
-          arivanStatsText.textContent = "Błąd API";
+          communityserverStatsText.textContent = "Błąd API";
       }
 
-      // 2. Serwer Kameleon
+      // 2. Serwer Gameserver
       try {
-          const responseKameleon = await fetch(`https://discord.com/api/guilds/${DISCORD_KAMELEON_ID}/widget.json`);
-          if (responseKameleon.ok) {
-              const dataKameleon = await responseKameleon.json();
+          const responseGameserver = await fetch(`https://discord.com/api/guilds/${DISCORD_GAMESERVER_ID}/widget.json`);
+          if (responseGameserver.ok) {
+              const dataGameserver = await responseGameserver.json();
               
-              if (dataKameleon.instant_invite) {
-                  kameleonLink.href = dataKameleon.instant_invite;
-                  if(kameleonBtn.tagName === 'A') { kameleonBtn.href = dataKameleon.instant_invite; }
+              if (dataGameserver.instant_invite) {
+                  gameserverLink.href = dataGameserver.instant_invite;
+                  if(gameserverBtn.tagName === 'A') { gameserverBtn.href = dataGameserver.instant_invite; }
               }
-              if (dataKameleon.presence_count !== undefined) {
-                  kameleonStatsText.textContent = `${formatNumber(dataKameleon.presence_count)} Online`;
-              }
-
-              if (dataKameleon.members) {
-                  processVoiceAndOnlineUsers(dataKameleon.members, kameleonUserAvatars, kameleonTrack, kameleonMic, 'kameleon');
+              if (dataGameserver.presence_count !== undefined) {
+                  gameserverStatsText.textContent = `${formatNumber(dataGameserver.presence_count)} Online`;
               }
 
-              const memberKameleon = dataKameleon.members.find(m => m.username && DISCORD_USERNAMES.includes(m.username.toLowerCase()));
-              if (memberKameleon) {
+              if (dataGameserver.members) {
+                  processVoiceAndOnlineUsers(dataGameserver.members, gameserverUserAvatars, gameserverTrack, gameserverMic, 'gameserver');
+              }
+
+              const memberGameserver = dataGameserver.members.find(m => m.username && DISCORD_USERNAMES.includes(m.username.toLowerCase()));
+              if (memberGameserver) {
                   if (currentFetchedStatus === 'offline') {
-                      currentFetchedStatus = memberKameleon.status;
+                      currentFetchedStatus = memberGameserver.status;
                   }
-                  if (memberKameleon.channel_id !== undefined && memberKameleon.channel_id !== null) {
-                      isSpeakingOnKameleon = true;
+                  if (memberGameserver.channel_id !== undefined && memberGameserver.channel_id !== null) {
+                      isSpeakingOnGameserver = true;
                   }
               }
           } else {
-              kameleonStatsText.textContent = "Widget wyłączony";
+              gameserverStatsText.textContent = "Widget wyłączony";
           }
       } catch (error) {
           console.error(error);
-          kameleonStatsText.textContent = "Błąd połączenia";
+          gameserverStatsText.textContent = "Błąd połączenia";
       }
 
       // Animacje ładowania GUI
       setTimeout(() => {
-          arivanLink.classList.add('load-logo');
-          kameleonLink.classList.add('load-logo');
+          communityserverLink.classList.add('load-logo');
+          gameserverLink.classList.add('load-logo');
       }, 400);
 
       setTimeout(() => {
-          arivanLink.classList.add('load-title');
-          kameleonLink.classList.add('load-title');
+          communityserverLink.classList.add('load-title');
+          gameserverLink.classList.add('load-title');
       }, 800);
 
       setTimeout(() => {
-          arivanLink.classList.add('load-sub');
-          kameleonLink.classList.add('load-sub');
+          communityserverLink.classList.add('load-sub');
+          gameserverLink.classList.add('load-sub');
       }, 1200);
 
       setTimeout(() => {
-          arivanLink.classList.add('load-bottom');
-          kameleonLink.classList.add('load-bottom');
+          communityserverLink.classList.add('load-bottom');
+          gameserverLink.classList.add('load-bottom');
 
-          ['arivan', 'kameleon'].forEach(key => {
+          ['communityserver', 'gameserver'].forEach(key => {
               if (pendingAvatarsAnimation[key]) {
                   pendingAvatarsAnimation[key].forEach((item, index) => {
                       setTimeout(() => {
@@ -1207,7 +1207,7 @@
           mainAvatar.classList.add('loaded');
           mainAvatar.classList.remove('status-online', 'status-idle', 'status-dnd', 'status-offline', 'status-speaking');
           
-          if (isSpeakingOnArivan || isSpeakingOnKameleon) {
+          if (isSpeakingOnCommunityserver || isSpeakingOnGameserver) {
               mainAvatar.classList.add('status-speaking');
               statusBubble.textContent = "Rozmawia na głosowym";
           } else {
